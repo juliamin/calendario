@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src = "/static/js/angular.min.js"></script>
+    <script type="text/javascript" src="/static/js/angular-route.js"></script>
+    <script type="text/javascript" src="/static/js/app.js"></script>
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/app.css">
+</head>
+<body ng-app="myApp">
+  <header>
+      <ul>
+          <li class="active"><a href="./">Home</a></li>
+          <li><a href="./cadastro">Cadastrar</a></li>
+      </ul>
+  </header>
+	<fieldset>
+		<form class="form_login" ng-controller="check_login" ng-submit="login()"> 
+			<p text-align="center"><h3><strong>Bem vindo ao nosso sistema!</strong></h3></p><br>
+				<p>Utilize seu cadastro para começar.</p>
+					<div class="container_login"> 
+						<label><b>Login</b></label>
+						<input type="text" placeholder="Entre com Login" id="uname" ng-model="dados.login">
+						<label><b>Password</b></label>
+						<input type="password" placeholder="Entre com o Password" id="psw" ng-model="dados.password">
+					</div>
+					<div class="container2">				
+						<button type="submit" id="btn_save" class="btn btn-success">Login</button>
+					</div>			
+		</form>
+	</fieldset>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src = "/static/js/angular.min.js"></script>
+    <script type="text/javascript" src="/static/js/angular-route.js"></script>
+    <script type="text/javascript" src="/static/js/app.js"></script>
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/app.css">
+</head>
+<body ng-app="myApp">
+  <header ng-controller="pageCtrl">
+      <ul>
+          <li><a href="./home">Home</a></li>
+          <li><a href="./calendario">Calendário</a></li>
+		  <li class="active"><a href="./novo">Novo evento</a></li>
+		  <li style="float:right"><a ng-click="logout()">Logout</a></li>
+		  <li style="float:right"><a><strong>//user_login//</strong></a></li>
+      </ul>
+  </header>
+	<fieldset  ng-controller="cadEventos" ng-submit="cadastrar_ev()">
+		<form class="form_eventos">
+			<p>Cadastrar um novo evento:</p>
+			<hr align="center" width="40" size="1">
+			<div>
+				<label><b>Descrição</b></label><br>
+				<input type="text" placeholder="Digite a descrição do evento" ng-model="dados.descricao"><br>
+				<label><b>Início</b></label><br>
+				<input type="datetime-local" ng-model="dados.inicio"><br>
+				<label><b>Fim</b></label><br>
+				<input type="datetime-local" ng-model="dados.fim"><br>
+				<label><b>Compartilhar com </b></label><br>
+				<select ng-model="selectedName" ng-options="x.nome for x in usuarios"></select>
+			</div><br>
+			<div class="container2">
+				<button type="submit" class="btn btn-success">Cadastrar</button>
+			</div>
+		</form>
+	</fieldset>
+</body>
+</html>
+</html>

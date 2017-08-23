@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src = "/static/js/angular.min.js"></script>
+    <script type="text/javascript" src="/static/js/angular-route.js"></script>
+    <script type="text/javascript" src="/static/js/app.js"></script>
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/app.css">
+</head>
+<body ng-app="myApp">
+  <header ng-controller="pageCtrl">
+      <ul>
+          <li class="active"><a href="./home">Home</a></li>
+          <li><a href="./calendario">Calendário</a></li>
+		  <li><a href="./novo">Novo evento</a></li>
+		  <li style="float:right"><a ng-click="logout()">Logout</a></li>
+		  <li style="float:right"><a><strong>//user_login//</strong></a></li>
+      </ul>
+  </header>
+	<fieldset>
+		<form class="form_eventos" ng-controller="calendario"> 
+		<p><h3>Olá //dados.nome//!</h3><br>
+		Navegue no nosso menu para adicionar seus eventos e organizar seu calendário!</p>
+		</form> 
+	</fieldset>
+</body>
+</html>

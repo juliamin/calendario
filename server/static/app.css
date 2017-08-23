@@ -1,0 +1,114 @@
+body {
+  background-color: white;
+  background-image: url(img/bckground.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  left: 0;
+  width: 100%;
+  position: fixed;
+}
+ 
+header li {
+  float: left;
+} 
+ 
+header li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ 
+li a:hover {
+  background-color: #008000;
+  text-decoration: none;
+  color:white;
+}
+ 
+a:link, a:visited {
+  text-decoration: none;
+  color: white;
+}
+ 
+.active {
+  background-color: #006400;
+  color: white;
+}
+ 
+.container1 {
+	width: 60%;
+	padding-top: 12px;
+	float: left;
+}
+
+.container11 {
+	padding-top: 12px;
+}
+
+.container2 {
+	padding-top: 12px;
+	text-align:right;
+	clear: left;
+}
+.form_desc input[type=text],.form_desc input[type=datetime-local],.form_eventos input[type=text],.form_eventos input[type=datetime-local],.form_eventos select{
+	padding: 3px 20px 3px 30px;
+	width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    box-sizing: border-box;
+}
+
+
+.container_login {
+  text-align: left;
+  padding: 12px;
+}
+
+.container_login input[type=text],.container_login input[type=password],.form_login input[type=text],.form_login input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+	border-radius: 7px;
+    box-sizing: border-box;
+}
+
+.form_login {
+  margin: 100px 300px 0px 300px;
+  padding: 20px 20px 20px 20px;
+  background-color: #e3eaee;
+  box-shadow: 1px 1px 20px #888888;
+  border: 0px;
+}
+
+.form_eventos {
+  margin: 100px 200px 0px 200px;
+  padding: 20px 20px 20px 20px;
+  background-color: #e3eaee;
+  box-shadow: 1px 1px 20px #888888;
+  border: 0px;
+}
+.form_desc {
+  margin: 20px 200px 0px 200px;
+  padding: 20px 20px 20px 20px;
+  background-color: #e3eaee;
+  box-shadow: 1px 1px 20px #888888;
+  border: 0px;
+}
+
+fieldset {
+  border: 0px solid #ddd;
+  border-radius: 7px;
+}

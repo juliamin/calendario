@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src = "/static/js/angular.min.js"></script>
+    <script type="text/javascript" src="/static/js/angular-route.js"></script>
+    <script type="text/javascript" src="/static/js/app.js"></script>
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/app.css">
+</head>
+<body ng-app="myApp">
+  <header ng-controller="pageCtrl">
+      <ul>
+          <li><a href="./home">Home</a></li>
+          <li class="active"><a href="./calendario">Calendário</a></li>
+		  <li><a href="./novo">Novo evento</a></li>
+		  <li style="float:right"><a ng-click="logout()">Logout</a></li>
+		  <li style="float:right"><a><strong>//user_login//</strong></a></li>
+      </ul>
+  </header>
+	<fieldset  ng-controller="ctrEventos" ng-submit="cadastrar()">
+		<form class="form_eventos"> 
+			<p>Seus eventos:</p>
+			<hr align="center" width="40" size="1" color=red>
+			<table class="table table-striped">
+				<tr>
+					<th>Descricao</th>
+					<th>Inicio</th>
+					<th>Fim</th>
+					<th>Pendente</th>
+				</tr>
+				<tr ng-repeat='evento in eventos' ng-click="info(evento)">
+					<td>//evento.descricao//</td>
+					<td>//evento.inicio//</td>
+					<td>//evento.fim//</td>
+					<td>//evento.pendente//</td>
+				</tr>
+			</table>
+		</form>
+		<form class="form_desc" ng-show="onclick">
+			<div>
+				<label><b>Descrição</b></label><br>
+				<input type="text" ng-model="dados.descricao"><br>
+				<label><b>Início</b></label><br>
+				<input type="text" ng-model="dados.inicio"><br>
+				<label><b>Fim</b></label><br>
+				<input type="text" ng-model="dados.fim"><br>
+				<label><b>Pendente</b></label><br>
+				<input type="text" ng-model="dados.pendente"><br>
+			</div><br>
+			<div class="container2">
+				<button ng-click="salvar()" class="btn btn-success">Salvar</button>
+				<button ng-click="deletar()" class="btn btn-success">Deletar</button>
+			</div>
+		</form>
+	</fieldset>
+</body>
+</html>
+</html>
